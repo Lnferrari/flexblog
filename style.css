@@ -30,12 +30,10 @@ header {
 }
 
 nav {
-    width: 57%;
+    width: 60%;
     margin: auto;
     padding: 3.2rem 0;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -46,17 +44,13 @@ nav {
     margin-left: -4rem;
     padding: 1.2rem;
     background-color: #8496b444;
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
     border-radius: 5px;
     flex-basis: 30%;
 }
 
 .navbar {
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
     font-weight: bolder;
     list-style: none;
     flex-basis: 33%;
@@ -158,17 +152,13 @@ nav {
 /* GENERAL MAIN STYLES */
 
 main {
-    width: 58%;
+    width: 61%;
     margin: auto;
 }
 
 .separator {
     width: 100%;
-    height: 8vh;
-}
-
-.container {
-    border-radius: 2rem;
+    height: 6vh;
 }
 
 .boxes-link {
@@ -178,29 +168,346 @@ main {
     justify-content: space-between;
 }
 
-.box-link {
+.link {
     background-color: white;
     margin: 0.8rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 25%;
-    display: flex;
+    flex: 1 1 25%;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
+}
+
+.box {
     cursor: pointer;
     box-shadow: 1px 1px 5px rgba(1, 1, 1, .05);
     transition: 0.3s;
+    font-weight: bold;
 }
 
-/*  HOVER EFFECT */
+.icon-container > i {
+    color: rgba(0, 0, 255, 0.8);
+}
 
-.box-link:hover {
+/*  Hover effect */
+
+.box:hover {
     transition: 0.3s;
     transform: translateY(-5%);
     box-shadow: 0 5px 10px rgba(1, 1, 1, .2);
 }
 
-.icon-container > i {
-    color: rgba(0, 0, 255, 0.8);
+.box:hover i {
+    color: #718096;
+}
+
+/* ***** */
+
+.main-wrapper {
+    width: 100%;
+}
+
+.big {
+    width: 76%;
+    height: 100%;
+    margin: 0.8rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Slideshow container STYLES*/
+.slideshow-container {
+    width: 100%;
+    height: 50%;
+    margin: 0.8rem;
+    position: relative;
+    border-radius: 2rem;
+  }
+  
+/* Hide the images by default */
+.mySlides {
+    width: 98.5%;
+    height: 100%;
+    margin: 0 0.8rem;
+    display: none;
+}
+
+.mySlides > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    filter: brightness(60%);
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 12%;
+    left: 14%;
+
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1rem;
+    padding: 0.8rem;
+
+    color: #717e91;
+    background-color: white;
+
+    font-weight: bold;
+    font-size: 1.8rem;
+
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.next {
+    margin-left: 7rem;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: blue;
+    color: white;
+}
+  
+/* Caption text */
+.text-main-img {
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.text-main-img a, .text-main-img div {
+    margin: 2rem 0;
+}
+
+.text-main-img div {
+    width: 70%;
+}
+
+.text-main-img a, .author {
+    color: white;
+    font-weight: bolder;
+}
+
+.text-main-img a {
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.text-main-img .text {
+    color: #718096;
+    text-shadow: 1px 1px black;
+}
+  
+/* The dots/bullets/indicators */
+.indicators-img {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 4px 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: blue;
+}
+  
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* end slideshow styles */
+
+.small-imgs {
+    width: 100%;
+    height: 49%;
+    margin: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article {
+    margin: 0.8rem;
+    flex: 1 1 45%;
+    border-left: 5px solid #66a4eaa1;
+}
+
+.wrapper-text {
+    width: 70%;
+    height: 100%;
+    margin: 0.8rem;
+    flex-flow: wrap column;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.wrapper-text .label {
+    background-color: rgba(236, 236, 14, 0.5);
+    font-size: 1.3rem;
+    padding: .6rem 1.5rem;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+    border-radius: 0.8rem;
+    align-self: flex-start;
+}
+
+#pink {
+    background-color: #e9d8fd;
+}
+
+.wrapper-text > div:first-of-type {
+    color: black;
+    align-self: flex-start;
+}
+
+.wrapper-text div:last-child {
+    width: 100%;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-text > div:last-child > span:last-child {
+    font-weight: normal;
+}
+
+.aside {
+    width: 23%;
+    height: 100%;
+    margin: 0.8rem;
+    margin-left: 0;
+    padding: 3.6rem;
+    background-color: #edf2f7;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* articles styles */
+
+.small-img > img {
+    width: 130px;
+    height: 155px;
+    margin: 0.8rem;
+    border-radius: 1rem;
+}
+
+/* Aside Styles */
+
+.aside > i {
+    color: rgb(162, 0, 255);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aside > h2 {
+    width: 70%;
+    font-family: 'Inter', sans-serif;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    line-height: 2.8rem;
+}
+
+.aside > h3 {
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.aside > ul {
+    width: 95%;
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.aside > ul > li::before {
+    content: "\2022";
+    color: #5fbc79;
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.6em;
+}
+
+.aside > ul > li {
+    margin: 0.5rem auto;
+    font-size: 1.4rem;
+    color: #718096;
+    line-height: 2.8rem;
+}
+
+.aside > a {
+    width: 80%;
+    margin-top: 7rem;
+    padding: 1.5rem 2rem;
+    align-self: center;
+    background-color: rgb(102, 126, 234);
+    color: white;
+    border: 4px solid rgb(102, 126, 234);
+    border-radius: 3rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.aside > a:hover {
+    background-color: #718096;
+    border: 4px solid #718096;
+}
+
+.aside > * {
+    align-self: flex-start;
+}
+
+
+
+/* ******* */
+
+
+
+
+
+
+
+
+
+/* COMMON STYLES */
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    border-radius: 2rem;
 }
